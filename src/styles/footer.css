@@ -1,0 +1,80 @@
+/* Estilo geral do footer */
+.footer {
+    display: flex; /* Alinha os itens em linha */
+    justify-content: center; /* Espaço entre os dois blocos */
+    align-items: center; /* Alinha as divs no topo */
+    background-color: black; /* Cor de fundo */
+    color: white; /* Cor do texto */
+    padding: 50px;
+    flex-wrap: wrap; /* Garante responsividade em telas pequenas */
+    border-top: solid white 1px;
+  }
+  
+  /* Divisão da esquerda */
+  .footer-left {
+    text-align: center;
+    flex: 1; /* Ocupará espaço proporcional */
+    margin-right: 20px;
+  }
+  
+  .footer-left h3 {
+    margin-bottom: 10px;
+    font-size: 18px;
+  }
+  
+  /* Divisão da direita */
+  .footer-right {
+    flex: 1; /* Ocupará espaço proporcional */
+  }
+  
+  .footer-right h3 {
+    margin-bottom: 10px;
+    font-size: 18px;
+
+  }
+  
+  /* Logos dos parceiros */
+  .partner-logos {
+    display: flex; /* Alinha as logos em linha */
+    gap: 50px; /* Espaçamento entre as logos */
+    flex-wrap: wrap; /* Permite que as logos quebrem linha em telas menores */
+    padding-bottom: 50px;
+  }
+  
+  .partner-logos img {
+    max-width: 80px; /* Limita o tamanho das imagens */
+    height: auto; /* Mantém proporção das logos */
+    
+      
+  }
+
+  .footer-logos{
+    width: 700px;
+    height: 700px;
+    border: solid black;
+    
+  }
+
+  .partner-logos img:hover{
+    transform: scale(1.1); /* Aumenta levemente a imagem ao passar o mouse */
+  }
+  
+  /* Responsividade para telas menores */
+  @media (max-width: 768px) {
+    .footer {
+      flex-direction: column; /* Empilha os itens */
+      text-align: center;
+    }
+  
+    .footer-left,
+    .footer-right {
+      flex: none; /* Remove o comportamento de flex-grow */
+      margin-bottom: 20px;
+    }
+  
+    .partner-logos {
+      justify-content: center; /* Centraliza as logos */
+    }
+
+  
+  }

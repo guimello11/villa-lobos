@@ -1,0 +1,116 @@
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 1px 5%;
+    position: sticky;
+    height: 5rem;
+    top: 0;
+    background-color: black;
+    z-index: 3;
+    border-bottom: solid white 1px;
+}
+
+.logo{
+    display: flex;
+            width: 210px;
+            height: 210px; /* Altura do header */
+            background-color: black; /* Cor de fundo do header */
+}
+
+#navbar {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: black;
+    font-size: 1.7rem;
+    
+}
+
+#nav_logo {
+    font-size: 5rem;
+    color: black;
+}
+
+#nav_list {
+    display: flex;
+    list-style: none;
+    gap: 48px;
+}
+
+.nav-item active:hover {
+box-shadow: 5px 5px 5px 5px white;
+}
+
+.nav-item a {
+    letter-spacing: 2px;
+    text-decoration: none;
+    color: white;
+    font-weight: 450;
+    padding: .5rem;
+    border-radius: 10px;
+    font-size: 1.4rem;
+    transition: 0.7s background-color ease;
+}
+
+.nav-item a:hover{
+    color: black;
+    background-color: white;
+}
+
+
+#mobile_btn {
+    display: none;
+}
+
+#mobile_menu {
+    display: none;
+}
+
+@media screen and (max-width: 1250px) {
+    #nav_list,
+    #navbar .btn-default {
+        display: none;
+    }
+
+    #navbar{
+        display: flex;
+        justify-content: center;
+    }
+
+    #mobile_btn {
+        display: block;
+        border: none;
+        background-color: transparent;
+        font-size: 1.5rem;
+        cursor: pointer;
+        color: white;
+    }
+
+    #mobile_menu.active {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+
+    #mobile_nav_list {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 12px;
+        margin: 12px 0px;
+        background-color: black;
+        height: 25rem;
+        border-radius: 15px;
+    }
+
+    #mobile_nav_list .nav-item {
+        list-style: none;
+        text-align: center;
+        font-size: 2rem;
+    } 
+}
